@@ -8,30 +8,52 @@
 
 #import "AFNetworkingController.h"
 
-@interface AFNetworkingController ()
+@interface AFNetworkingController ()<NSURLSessionDelegate>
 
 @end
-
 @implementation AFNetworkingController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//    https://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=18755057919
+    [self URLSessionRequest];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)URLSessionRequest {
+//    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:self delegateQueue:queue];
+    
+    
+    NSURL *url = [NSURL URLWithString:@"https://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=18755057919"];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    request.HTTPMethod = @"GET";
+//    request.m
+//    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        NSLog(@"%s", __func__);
+//        NSLog(@"%@", data);
+//    }];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request];
+    [dataTask resume];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// MARK - NSURLSessionDelegate
+- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(nullable NSError *)error {
+    NSLog(@"%s", __func__);
 }
-*/
 
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
+ completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * _Nullable credential))completionHandler {
+    
+    
+    NSLog(@"%@", session);
+    NSLog(@"%s", __func__);
+}
+
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)sessio {
+    NSLog(@"%s", __func__);
+}
 @end
+
