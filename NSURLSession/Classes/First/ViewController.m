@@ -7,15 +7,27 @@
 //
 
 #import "ViewController.h"
+#import "XJDownloadTaskController.h"
 
-@interface ViewController ()
+static NSString * const kTableViewCell = @"UITableViewCellClass";
 
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray *dataList;
 @end
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCell];
+    
+    [self buildingDataListCompletion:^(NSMutableArray *arrayM) {
+        self.dataList = arrayM;
+        [self.tableView reloadData];
+    }];
 }
 
 // URLSession GET请求 NSURLSessionDataTask Block
@@ -96,5 +108,34 @@
 //    [self URLSessionDemo02];
 }
 
+// MARK - UITableViewDelegate, UITableViewDataSource
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCell];
+    
+    NSDictionary *dict = self.dataList[indexPath.row];
+    cell.textLabel.text = [dict objectForKey:@"title"];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSDictionary *dict = self.dataList[indexPath.row];
+//    Class class = NSClassFromString([dict objectForKey:@"class"]);
+//    UIViewController *vc = [[class alloc] init];
+    XJDownloadTaskController *vc = [[XJDownloadTaskController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)buildingDataListCompletion:(void(^)(NSMutableArray *arrayM))completion {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"dataList" ofType:@"plist"];
+    
+    NSMutableArray *arryM;
+    arryM = [NSArray arrayWithContentsOfFile:path].mutableCopy;
+    completion(arryM);
+}
 @end
