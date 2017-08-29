@@ -124,10 +124,10 @@ static NSString * const kTableViewCell = @"UITableViewCellClass";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSDictionary *dict = self.dataList[indexPath.row];
-//    Class class = NSClassFromString([dict objectForKey:@"class"]);
-//    UIViewController *vc = [[class alloc] init];
-    XJDownloadTaskController *vc = [[XJDownloadTaskController alloc] init];
+    NSDictionary *dict = self.dataList[indexPath.row];
+    Class class = NSClassFromString([dict objectForKey:@"class"]);
+    UIViewController *vc = [[class alloc] init];
+//    XJDownloadTaskController *vc = [[XJDownloadTaskController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -8,5 +8,11 @@
 		<key>class</key>
 		<string>XJDownloadTaskController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>使用AFN请求</string>
+		<key>class</key>
+		<string>AFNetworkViewController</string>
+	</dict>
 </array>
 </plist>

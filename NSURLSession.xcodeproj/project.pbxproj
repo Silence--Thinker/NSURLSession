@@ -20,11 +20,14 @@
 		CB8693721E9CC037001F20DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8693701E9CC037001F20DA /* AppDelegate.m */; };
 		CBDF05381F2AE70700C8B3E8 /* WebImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDF05371F2AE70700C8B3E8 /* WebImageCell.m */; };
 		E8456D901F502D960037A1B9 /* XJDownloadTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8456D8F1F502D960037A1B9 /* XJDownloadTaskController.m */; };
+		E850F67F1F555A80002524A4 /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E850F67D1F555A80002524A4 /* NSString+JSON.m */; };
+		E850F6821F55651D002524A4 /* NSData+CommonEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = E850F6811F55651D002524A4 /* NSData+CommonEncrypt.m */; };
 		E8654BC71F501D650028145A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8654BBD1F501D650028145A /* ViewController.m */; };
 		E8654BC91F501D650028145A /* XJDownloadTaskController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8654BC11F501D650028145A /* XJDownloadTaskController.xib */; };
 		E8654BCA1F501D650028145A /* AFNetworkingController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8654BC41F501D650028145A /* AFNetworkingController.m */; };
 		E8654BCB1F501D650028145A /* WebImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8654BC61F501D650028145A /* WebImageController.m */; };
 		E8654BCF1F501FE40028145A /* dataList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8654BCE1F501FE40028145A /* dataList.plist */; };
+		E89631311F53EEB800694611 /* AFNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89631301F53EEB800694611 /* AFNetworkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,10 @@
 		CFD14E61386EBBAA45D8CC71 /* Pods-NSURLSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLSession.release.xcconfig"; path = "Pods/Target Support Files/Pods-NSURLSession/Pods-NSURLSession.release.xcconfig"; sourceTree = "<group>"; };
 		E8456D8E1F502D960037A1B9 /* XJDownloadTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJDownloadTaskController.h; sourceTree = "<group>"; };
 		E8456D8F1F502D960037A1B9 /* XJDownloadTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJDownloadTaskController.m; sourceTree = "<group>"; };
+		E850F67C1F555A80002524A4 /* NSString+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSON.h"; sourceTree = "<group>"; };
+		E850F67D1F555A80002524A4 /* NSString+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSON.m"; sourceTree = "<group>"; };
+		E850F6801F55651D002524A4 /* NSData+CommonEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+CommonEncrypt.h"; path = "../../../../../../../silence/Documents/GitHub/NSURLSession/NSURLSession/Other/StringSecurity/NSData+CommonEncrypt.h"; sourceTree = "<group>"; };
+		E850F6811F55651D002524A4 /* NSData+CommonEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+CommonEncrypt.m"; path = "../../../../../../../silence/Documents/GitHub/NSURLSession/NSURLSession/Other/StringSecurity/NSData+CommonEncrypt.m"; sourceTree = "<group>"; };
 		E8654BBC1F501D650028145A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E8654BBD1F501D650028145A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E8654BC11F501D650028145A /* XJDownloadTaskController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJDownloadTaskController.xib; sourceTree = "<group>"; };
@@ -62,6 +69,8 @@
 		E8654BC51F501D650028145A /* WebImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebImageController.h; sourceTree = "<group>"; };
 		E8654BC61F501D650028145A /* WebImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebImageController.m; sourceTree = "<group>"; };
 		E8654BCE1F501FE40028145A /* dataList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataList.plist; sourceTree = "<group>"; };
+		E896312F1F53EEB800694611 /* AFNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkViewController.h; sourceTree = "<group>"; };
+		E89631301F53EEB800694611 /* AFNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +163,7 @@
 		CB86936B1E9CC037001F20DA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E896312E1F53EDBF00694611 /* AFNRequest */,
 				E8654BBB1F501D650028145A /* First */,
 				E8654BBE1F501D650028145A /* SessionTask */,
 				E8654BC21F501D650028145A /* Temp */,
@@ -164,6 +174,7 @@
 		CB86936E1E9CC037001F20DA /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E850F6791F555A80002524A4 /* StringSecurity */,
 				3E08CB801F49D52A00105E23 /* HYBUnicodeReadable */,
 				CB86936F1E9CC037001F20DA /* AppDelegate.h */,
 				CB8693701E9CC037001F20DA /* AppDelegate.m */,
@@ -178,6 +189,17 @@
 				CBDF05371F2AE70700C8B3E8 /* WebImageCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E850F6791F555A80002524A4 /* StringSecurity */ = {
+			isa = PBXGroup;
+			children = (
+				E850F67C1F555A80002524A4 /* NSString+JSON.h */,
+				E850F67D1F555A80002524A4 /* NSString+JSON.m */,
+				E850F6801F55651D002524A4 /* NSData+CommonEncrypt.h */,
+				E850F6811F55651D002524A4 /* NSData+CommonEncrypt.m */,
+			);
+			path = StringSecurity;
 			sourceTree = "<group>";
 		};
 		E8654BBB1F501D650028145A /* First */ = {
@@ -212,6 +234,16 @@
 			);
 			name = Temp;
 			path = ../../../../../../silence/Documents/GitHub/NSURLSession/NSURLSession/Classes/Temp;
+			sourceTree = "<group>";
+		};
+		E896312E1F53EDBF00694611 /* AFNRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E896312F1F53EEB800694611 /* AFNetworkViewController.h */,
+				E89631301F53EEB800694611 /* AFNetworkViewController.m */,
+			);
+			name = AFNRequest;
+			path = ../../../../../../silence/Documents/GitHub/NSURLSession/NSURLSession/Classes/AFNRequest;
 			sourceTree = "<group>";
 		};
 		F898754FCF171EB7CF759874 /* Pods */ = {
@@ -357,12 +389,15 @@
 				E8654BCB1F501D650028145A /* WebImageController.m in Sources */,
 				E8654BC71F501D650028145A /* ViewController.m in Sources */,
 				CB1E4CB61EADD573005A2609 /* NSString+Dictionary.m in Sources */,
+				E89631311F53EEB800694611 /* AFNetworkViewController.m in Sources */,
 				CBDF05381F2AE70700C8B3E8 /* WebImageCell.m in Sources */,
+				E850F6821F55651D002524A4 /* NSData+CommonEncrypt.m in Sources */,
 				CB1E4CBA1EADD7B1005A2609 /* NSData+Dictionary.m in Sources */,
 				CB8693561E9C80E3001F20DA /* main.m in Sources */,
 				3E08CB881F49D52A00105E23 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				3E08CB891F49D52A00105E23 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				CB8693721E9CC037001F20DA /* AppDelegate.m in Sources */,
+				E850F67F1F555A80002524A4 /* NSString+JSON.m in Sources */,
 				E8654BCA1F501D650028145A /* AFNetworkingController.m in Sources */,
 				E8456D901F502D960037A1B9 /* XJDownloadTaskController.m in Sources */,
 				3E08CB871F49D52A00105E23 /* NSArray+HYBUnicodeReadable.m in Sources */,
