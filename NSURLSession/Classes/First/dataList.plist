@@ -8,5 +8,11 @@
 		<key>class</key>
 		<string>XJDownloadTaskController</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>使用dataTask下载</string>
+		<key>class</key>
+		<string>XJSessionDataTaskController</string>
+	</dict>
 </array>
 </plist>

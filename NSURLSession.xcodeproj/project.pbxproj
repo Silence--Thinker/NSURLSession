@@ -10,6 +10,14 @@
 		3E08CB871F49D52A00105E23 /* NSArray+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E08CB821F49D52A00105E23 /* NSArray+HYBUnicodeReadable.m */; };
 		3E08CB881F49D52A00105E23 /* NSDictionary+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E08CB841F49D52A00105E23 /* NSDictionary+HYBUnicodeReadable.m */; };
 		3E08CB891F49D52A00105E23 /* NSSet+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E08CB861F49D52A00105E23 /* NSSet+HYBUnicodeReadable.m */; };
+		3E7030AC1F5187CA00016AAB /* dataList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E7030A01F5187CA00016AAB /* dataList.plist */; };
+		3E7030AD1F5187CA00016AAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7030A21F5187CA00016AAB /* ViewController.m */; };
+		3E7030AE1F5187CA00016AAB /* XJDownloadTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7030A51F5187CA00016AAB /* XJDownloadTaskController.m */; };
+		3E7030AF1F5187CA00016AAB /* XJDownloadTaskController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7030A61F5187CA00016AAB /* XJDownloadTaskController.xib */; };
+		3E7030B01F5187CA00016AAB /* AFNetworkingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7030A91F5187CA00016AAB /* AFNetworkingController.m */; };
+		3E7030B11F5187CA00016AAB /* WebImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7030AB1F5187CA00016AAB /* WebImageController.m */; };
+		3E7030B51F51D8CE00016AAB /* XJSessionDataTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7030B31F51D8CE00016AAB /* XJSessionDataTaskController.m */; };
+		3E7030B61F51D8CE00016AAB /* XJSessionDataTaskController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7030B41F51D8CE00016AAB /* XJSessionDataTaskController.xib */; };
 		B0BCB65757CEF721622A9110 /* libPods-NSURLSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1615071CBDD6DF5EA273696A /* libPods-NSURLSession.a */; };
 		CB1E4CB61EADD573005A2609 /* NSString+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1E4CB51EADD573005A2609 /* NSString+Dictionary.m */; };
 		CB1E4CBA1EADD7B1005A2609 /* NSData+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1E4CB91EADD7B1005A2609 /* NSData+Dictionary.m */; };
@@ -19,12 +27,6 @@
 		CB8693641E9C80E3001F20DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8693621E9C80E3001F20DA /* LaunchScreen.storyboard */; };
 		CB8693721E9CC037001F20DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8693701E9CC037001F20DA /* AppDelegate.m */; };
 		CBDF05381F2AE70700C8B3E8 /* WebImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDF05371F2AE70700C8B3E8 /* WebImageCell.m */; };
-		E8456D901F502D960037A1B9 /* XJDownloadTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8456D8F1F502D960037A1B9 /* XJDownloadTaskController.m */; };
-		E8654BC71F501D650028145A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8654BBD1F501D650028145A /* ViewController.m */; };
-		E8654BC91F501D650028145A /* XJDownloadTaskController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8654BC11F501D650028145A /* XJDownloadTaskController.xib */; };
-		E8654BCA1F501D650028145A /* AFNetworkingController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8654BC41F501D650028145A /* AFNetworkingController.m */; };
-		E8654BCB1F501D650028145A /* WebImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8654BC61F501D650028145A /* WebImageController.m */; };
-		E8654BCF1F501FE40028145A /* dataList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8654BCE1F501FE40028145A /* dataList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,19 @@
 		3E08CB841F49D52A00105E23 /* NSDictionary+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
 		3E08CB851F49D52A00105E23 /* NSSet+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
 		3E08CB861F49D52A00105E23 /* NSSet+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		3E7030A01F5187CA00016AAB /* dataList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataList.plist; sourceTree = "<group>"; };
+		3E7030A11F5187CA00016AAB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3E7030A21F5187CA00016AAB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3E7030A41F5187CA00016AAB /* XJDownloadTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJDownloadTaskController.h; sourceTree = "<group>"; };
+		3E7030A51F5187CA00016AAB /* XJDownloadTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJDownloadTaskController.m; sourceTree = "<group>"; };
+		3E7030A61F5187CA00016AAB /* XJDownloadTaskController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJDownloadTaskController.xib; sourceTree = "<group>"; };
+		3E7030A81F5187CA00016AAB /* AFNetworkingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingController.h; sourceTree = "<group>"; };
+		3E7030A91F5187CA00016AAB /* AFNetworkingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingController.m; sourceTree = "<group>"; };
+		3E7030AA1F5187CA00016AAB /* WebImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebImageController.h; sourceTree = "<group>"; };
+		3E7030AB1F5187CA00016AAB /* WebImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebImageController.m; sourceTree = "<group>"; };
+		3E7030B21F51D8CE00016AAB /* XJSessionDataTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJSessionDataTaskController.h; sourceTree = "<group>"; };
+		3E7030B31F51D8CE00016AAB /* XJSessionDataTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJSessionDataTaskController.m; sourceTree = "<group>"; };
+		3E7030B41F51D8CE00016AAB /* XJSessionDataTaskController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJSessionDataTaskController.xib; sourceTree = "<group>"; };
 		48BC594EB8481018123522B9 /* Pods-NSURLSession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLSession.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NSURLSession/Pods-NSURLSession.debug.xcconfig"; sourceTree = "<group>"; };
 		CB1E4CB41EADD573005A2609 /* NSString+Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Dictionary.h"; sourceTree = "<group>"; };
 		CB1E4CB51EADD573005A2609 /* NSString+Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Dictionary.m"; sourceTree = "<group>"; };
@@ -52,16 +67,6 @@
 		CBDF05361F2AE70700C8B3E8 /* WebImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebImageCell.h; sourceTree = "<group>"; };
 		CBDF05371F2AE70700C8B3E8 /* WebImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebImageCell.m; sourceTree = "<group>"; };
 		CFD14E61386EBBAA45D8CC71 /* Pods-NSURLSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLSession.release.xcconfig"; path = "Pods/Target Support Files/Pods-NSURLSession/Pods-NSURLSession.release.xcconfig"; sourceTree = "<group>"; };
-		E8456D8E1F502D960037A1B9 /* XJDownloadTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJDownloadTaskController.h; sourceTree = "<group>"; };
-		E8456D8F1F502D960037A1B9 /* XJDownloadTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJDownloadTaskController.m; sourceTree = "<group>"; };
-		E8654BBC1F501D650028145A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E8654BBD1F501D650028145A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E8654BC11F501D650028145A /* XJDownloadTaskController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJDownloadTaskController.xib; sourceTree = "<group>"; };
-		E8654BC31F501D650028145A /* AFNetworkingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingController.h; sourceTree = "<group>"; };
-		E8654BC41F501D650028145A /* AFNetworkingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingController.m; sourceTree = "<group>"; };
-		E8654BC51F501D650028145A /* WebImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebImageController.h; sourceTree = "<group>"; };
-		E8654BC61F501D650028145A /* WebImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebImageController.m; sourceTree = "<group>"; };
-		E8654BCE1F501FE40028145A /* dataList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,40 @@
 				3E08CB861F49D52A00105E23 /* NSSet+HYBUnicodeReadable.m */,
 			);
 			path = HYBUnicodeReadable;
+			sourceTree = "<group>";
+		};
+		3E70309F1F5187CA00016AAB /* First */ = {
+			isa = PBXGroup;
+			children = (
+				3E7030A01F5187CA00016AAB /* dataList.plist */,
+				3E7030A11F5187CA00016AAB /* ViewController.h */,
+				3E7030A21F5187CA00016AAB /* ViewController.m */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		3E7030A31F5187CA00016AAB /* SessionTask */ = {
+			isa = PBXGroup;
+			children = (
+				3E7030A41F5187CA00016AAB /* XJDownloadTaskController.h */,
+				3E7030A51F5187CA00016AAB /* XJDownloadTaskController.m */,
+				3E7030A61F5187CA00016AAB /* XJDownloadTaskController.xib */,
+				3E7030B21F51D8CE00016AAB /* XJSessionDataTaskController.h */,
+				3E7030B31F51D8CE00016AAB /* XJSessionDataTaskController.m */,
+				3E7030B41F51D8CE00016AAB /* XJSessionDataTaskController.xib */,
+			);
+			path = SessionTask;
+			sourceTree = "<group>";
+		};
+		3E7030A71F5187CA00016AAB /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				3E7030A81F5187CA00016AAB /* AFNetworkingController.h */,
+				3E7030A91F5187CA00016AAB /* AFNetworkingController.m */,
+				3E7030AA1F5187CA00016AAB /* WebImageController.h */,
+				3E7030AB1F5187CA00016AAB /* WebImageController.m */,
+			);
+			path = Temp;
 			sourceTree = "<group>";
 		};
 		74D24F3E141A582FB45AA0BE /* Frameworks */ = {
@@ -154,9 +193,9 @@
 		CB86936B1E9CC037001F20DA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E8654BBB1F501D650028145A /* First */,
-				E8654BBE1F501D650028145A /* SessionTask */,
-				E8654BC21F501D650028145A /* Temp */,
+				3E70309F1F5187CA00016AAB /* First */,
+				3E7030A31F5187CA00016AAB /* SessionTask */,
+				3E7030A71F5187CA00016AAB /* Temp */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -178,40 +217,6 @@
 				CBDF05371F2AE70700C8B3E8 /* WebImageCell.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		E8654BBB1F501D650028145A /* First */ = {
-			isa = PBXGroup;
-			children = (
-				E8654BCE1F501FE40028145A /* dataList.plist */,
-				E8654BBC1F501D650028145A /* ViewController.h */,
-				E8654BBD1F501D650028145A /* ViewController.m */,
-			);
-			name = First;
-			path = ../../../../../../silence/Documents/GitHub/NSURLSession/NSURLSession/Classes/First;
-			sourceTree = "<group>";
-		};
-		E8654BBE1F501D650028145A /* SessionTask */ = {
-			isa = PBXGroup;
-			children = (
-				E8456D8E1F502D960037A1B9 /* XJDownloadTaskController.h */,
-				E8456D8F1F502D960037A1B9 /* XJDownloadTaskController.m */,
-				E8654BC11F501D650028145A /* XJDownloadTaskController.xib */,
-			);
-			name = SessionTask;
-			path = ../../../../../../silence/Documents/GitHub/NSURLSession/NSURLSession/Classes/SessionTask;
-			sourceTree = "<group>";
-		};
-		E8654BC21F501D650028145A /* Temp */ = {
-			isa = PBXGroup;
-			children = (
-				E8654BC31F501D650028145A /* AFNetworkingController.h */,
-				E8654BC41F501D650028145A /* AFNetworkingController.m */,
-				E8654BC51F501D650028145A /* WebImageController.h */,
-				E8654BC61F501D650028145A /* WebImageController.m */,
-			);
-			name = Temp;
-			path = ../../../../../../silence/Documents/GitHub/NSURLSession/NSURLSession/Classes/Temp;
 			sourceTree = "<group>";
 		};
 		F898754FCF171EB7CF759874 /* Pods */ = {
@@ -285,11 +290,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8654BCF1F501FE40028145A /* dataList.plist in Resources */,
 				CB8693641E9C80E3001F20DA /* LaunchScreen.storyboard in Resources */,
 				CB8693611E9C80E3001F20DA /* Assets.xcassets in Resources */,
-				E8654BC91F501D650028145A /* XJDownloadTaskController.xib in Resources */,
+				3E7030AC1F5187CA00016AAB /* dataList.plist in Resources */,
 				CB86935F1E9C80E3001F20DA /* Main.storyboard in Resources */,
+				3E7030AF1F5187CA00016AAB /* XJDownloadTaskController.xib in Resources */,
+				3E7030B61F51D8CE00016AAB /* XJSessionDataTaskController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,17 +360,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8654BCB1F501D650028145A /* WebImageController.m in Sources */,
-				E8654BC71F501D650028145A /* ViewController.m in Sources */,
+				3E7030B11F5187CA00016AAB /* WebImageController.m in Sources */,
+				3E7030AD1F5187CA00016AAB /* ViewController.m in Sources */,
 				CB1E4CB61EADD573005A2609 /* NSString+Dictionary.m in Sources */,
 				CBDF05381F2AE70700C8B3E8 /* WebImageCell.m in Sources */,
 				CB1E4CBA1EADD7B1005A2609 /* NSData+Dictionary.m in Sources */,
+				3E7030AE1F5187CA00016AAB /* XJDownloadTaskController.m in Sources */,
+				3E7030B51F51D8CE00016AAB /* XJSessionDataTaskController.m in Sources */,
 				CB8693561E9C80E3001F20DA /* main.m in Sources */,
 				3E08CB881F49D52A00105E23 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				3E08CB891F49D52A00105E23 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				CB8693721E9CC037001F20DA /* AppDelegate.m in Sources */,
-				E8654BCA1F501D650028145A /* AFNetworkingController.m in Sources */,
-				E8456D901F502D960037A1B9 /* XJDownloadTaskController.m in Sources */,
+				3E7030B01F5187CA00016AAB /* AFNetworkingController.m in Sources */,
 				3E08CB871F49D52A00105E23 /* NSArray+HYBUnicodeReadable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

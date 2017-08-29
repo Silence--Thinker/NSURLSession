@@ -26,6 +26,10 @@ NSURLSessionDataDelegate, NSURLSessionDownloadDelegate>
 @end
 @implementation AFNetworkingController
 
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // NSURLSessionDataTask
@@ -33,6 +37,11 @@ NSURLSessionDataDelegate, NSURLSessionDownloadDelegate>
     
     // NSURLSessionDownloadTask
 //    [self URLSessionDownloadTaskRequest];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
 }
 
 - (void)URLSessionDataTaskRequest {
@@ -52,6 +61,8 @@ NSURLSessionDataDelegate, NSURLSessionDownloadDelegate>
 //    }];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request];
     [dataTask resume];
+    
+    [session finishTasksAndInvalidate];
 }
 
 - (void)URLSessionDownloadTaskRequest {

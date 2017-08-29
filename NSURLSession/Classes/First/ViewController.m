@@ -22,6 +22,8 @@ static NSString * const kTableViewCell = @"UITableViewCellClass";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.tableView.tableFooterView = [UIView new];
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCell];
     
     [self buildingDataListCompletion:^(NSMutableArray *arrayM) {
@@ -124,10 +126,10 @@ static NSString * const kTableViewCell = @"UITableViewCellClass";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSDictionary *dict = self.dataList[indexPath.row];
-//    Class class = NSClassFromString([dict objectForKey:@"class"]);
-//    UIViewController *vc = [[class alloc] init];
-    XJDownloadTaskController *vc = [[XJDownloadTaskController alloc] init];
+    NSDictionary *dict = self.dataList[indexPath.row];
+    Class class = NSClassFromString([dict objectForKey:@"class"]);
+    UIViewController *vc = [[class alloc] init];
+//    XJDownloadTaskController *vc = [[XJDownloadTaskController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -138,4 +140,5 @@ static NSString * const kTableViewCell = @"UITableViewCellClass";
     arryM = [NSArray arrayWithContentsOfFile:path].mutableCopy;
     completion(arryM);
 }
+
 @end

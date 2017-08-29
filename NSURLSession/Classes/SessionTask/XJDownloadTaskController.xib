@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XJDownloadTaskController">
             <connections>
+                <outlet property="didWriteLabel" destination="MKD-vp-GQx" id="yEf-9n-fXG"/>
+                <outlet property="progressView" destination="MGH-aA-m4d" id="CP3-nw-iza"/>
+                <outlet property="textView" destination="0RK-dx-gCh" id="REP-dW-O9O"/>
+                <outlet property="totalBytesLabel" destination="icl-LA-Nqk" id="kth-IG-JpX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0pi-PX-dvv"/>
             </connections>
         </placeholder>
@@ -29,6 +33,9 @@
                     <state key="normal" title="开始下载">
                         <color key="titleColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                     </state>
+                    <connections>
+                        <action selector="didClickStart:" destination="-1" eventType="touchUpInside" id="hap-EX-bQx"/>
+                    </connections>
                 </button>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MGH-aA-m4d">
                     <rect key="frame" x="15" y="175" width="345" height="10"/>
@@ -68,7 +75,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga9-vr-bmy">
-                    <rect key="frame" x="152" y="461" width="70" height="30"/>
+                    <rect key="frame" x="152.5" y="461" width="70" height="30"/>
                     <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="sOc-SH-fif"/>
@@ -77,9 +84,12 @@
                     <state key="normal" title="取消下载">
                         <color key="titleColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                     </state>
+                    <connections>
+                        <action selector="didClickCancel:" destination="-1" eventType="touchUpInside" id="F05-cd-aqP"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQd-RX-wAn">
-                    <rect key="frame" x="152" y="416" width="70" height="30"/>
+                    <rect key="frame" x="152.5" y="416" width="70" height="30"/>
                     <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="3Oy-8x-YD8"/>
@@ -88,6 +98,9 @@
                     <state key="normal" title="暂停下载">
                         <color key="titleColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                     </state>
+                    <connections>
+                        <action selector="didClickSuspend:" destination="-1" eventType="touchUpInside" id="tIJ-XQ-JaU"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="htttp://down" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0RK-dx-gCh">
                     <rect key="frame" x="15" y="70" width="345" height="80"/>
@@ -108,12 +121,12 @@
                 <constraint firstItem="WgA-fV-6Cs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="83f-Bl-7J4"/>
                 <constraint firstItem="zAk-bI-rVl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Aj2-zM-yOM"/>
                 <constraint firstItem="zAk-bI-rVl" firstAttribute="top" secondItem="qC7-a8-Mca" secondAttribute="bottom" constant="10" id="CjZ-3S-tnW"/>
-                <constraint firstAttribute="trailing" secondItem="0RK-dx-gCh" secondAttribute="trailing" constant="15" id="EnM-qs-E8q"/>
                 <constraint firstItem="nVU-hj-g03" firstAttribute="top" secondItem="WgA-fV-6Cs" secondAttribute="bottom" constant="150" id="Ewr-vQ-n2E"/>
                 <constraint firstItem="MKD-vp-GQx" firstAttribute="leading" secondItem="icl-LA-Nqk" secondAttribute="leading" id="Jxl-Rx-WML"/>
                 <constraint firstItem="qC7-a8-Mca" firstAttribute="top" secondItem="MGH-aA-m4d" secondAttribute="bottom" constant="60" id="ORY-4E-KzZ"/>
                 <constraint firstAttribute="trailing" secondItem="MGH-aA-m4d" secondAttribute="trailing" constant="15" id="Rc1-pb-FaQ"/>
                 <constraint firstItem="MGH-aA-m4d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="UAh-sL-wZn"/>
+                <constraint firstAttribute="trailing" secondItem="0RK-dx-gCh" secondAttribute="trailing" constant="15" id="VvJ-bT-fce"/>
                 <constraint firstItem="nVU-hj-g03" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YBS-RA-6vk"/>
                 <constraint firstItem="ga9-vr-bmy" firstAttribute="top" secondItem="JQd-RX-wAn" secondAttribute="bottom" constant="15" id="a5V-va-41l"/>
                 <constraint firstItem="JQd-RX-wAn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="d6o-g6-LMd"/>
@@ -125,7 +138,7 @@
                 <constraint firstItem="qC7-a8-Mca" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="xqq-BP-NlG"/>
                 <constraint firstItem="icl-LA-Nqk" firstAttribute="leading" secondItem="qC7-a8-Mca" secondAttribute="trailing" constant="20" id="yJ6-BA-rh3"/>
             </constraints>
-            <point key="canvasLocation" x="-214" y="-839"/>
+            <point key="canvasLocation" x="-183.5" y="-858.5"/>
         </view>
     </objects>
 </document>

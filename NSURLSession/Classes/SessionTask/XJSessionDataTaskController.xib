@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XJSessionDataTaskController">
+            <connections>
+                <outlet property="didWriteLabel" destination="Y2y-B2-Hbk" id="jXF-bQ-mMU"/>
+                <outlet property="progressView" destination="gaX-dr-QW5" id="Nqe-Bi-lCy"/>
+                <outlet property="textField" destination="VYI-m7-4b1" id="zJk-Qh-XY1"/>
+                <outlet property="totalBytesLabel" destination="TrX-VZ-Gtm" id="t3y-1o-Xbe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R66-PI-PPf">
+                    <rect key="frame" x="153" y="321" width="70" height="30"/>
+                    <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="gz1-5c-tCf"/>
+                        <constraint firstAttribute="width" constant="70" id="lfz-ic-6wx"/>
+                    </constraints>
+                    <state key="normal" title="开始下载">
+                        <color key="titleColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickStart:" destination="-1" eventType="touchUpInside" id="bWS-Ky-PBe"/>
+                    </connections>
+                </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gaX-dr-QW5">
+                    <rect key="frame" x="15" y="125" width="345" height="10"/>
+                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="bTw-cL-Dv6"/>
+                    </constraints>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载进度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ot1-RK-6jf">
+                    <rect key="frame" x="153" y="150" width="70" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrX-VZ-Gtm">
+                    <rect key="frame" x="117" y="210" width="38" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2k-TW-036">
+                    <rect key="frame" x="153" y="411" width="70" height="30"/>
+                    <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="brT-Qq-FVZ"/>
+                        <constraint firstAttribute="width" constant="70" id="yTr-AS-12n"/>
+                    </constraints>
+                    <state key="normal" title="取消下载">
+                        <color key="titleColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickCancel:" destination="-1" eventType="touchUpInside" id="51G-nv-8AF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm5-z3-We9">
+                    <rect key="frame" x="153" y="366" width="70" height="30"/>
+                    <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="LRj-VM-EDx"/>
+                        <constraint firstAttribute="width" constant="70" id="Y6i-i9-ixI"/>
+                    </constraints>
+                    <state key="normal" title="暂停下载">
+                        <color key="titleColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickSuspend:" destination="-1" eventType="touchUpInside" id="yxj-4f-szV"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文件总大小：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTG-yt-X9N">
+                    <rect key="frame" x="15" y="210" width="92" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已完成：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTe-kn-c5T">
+                    <rect key="frame" x="15" y="238" width="62" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2y-B2-Hbk">
+                    <rect key="frame" x="117" y="238" width="38" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1e-uh-D63">
+                    <rect key="frame" x="67" y="465" width="240" height="30"/>
+                    <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="1kD-HY-aJs"/>
+                        <constraint firstAttribute="height" constant="30" id="Ox6-JQ-jpD"/>
+                    </constraints>
+                    <state key="normal" title="更新request(更换URL，必点击)">
+                        <color key="titleColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                    <connections>
+                        <action selector="changeRequest:" destination="-1" eventType="touchUpInside" id="nvi-t1-FyZ"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://github.com/MacDownApp/macdown/releases/download/v0.7.1/MacDown.app.zip" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VYI-m7-4b1">
+                    <rect key="frame" x="15" y="80" width="345" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Mm5-z3-We9" firstAttribute="centerX" secondItem="Ot1-RK-6jf" secondAttribute="centerX" id="64r-gd-NcB"/>
+                <constraint firstItem="Mm5-z3-We9" firstAttribute="top" secondItem="R66-PI-PPf" secondAttribute="bottom" constant="15" id="6uQ-1x-N2o"/>
+                <constraint firstItem="gaX-dr-QW5" firstAttribute="top" secondItem="VYI-m7-4b1" secondAttribute="bottom" constant="15" id="7k0-YU-PuG"/>
+                <constraint firstItem="D2k-TW-036" firstAttribute="top" secondItem="Mm5-z3-We9" secondAttribute="bottom" constant="15" id="C8w-r4-1LY"/>
+                <constraint firstItem="E1e-uh-D63" firstAttribute="top" secondItem="D2k-TW-036" secondAttribute="bottom" constant="24" id="ClB-Yd-Gsa"/>
+                <constraint firstItem="VYI-m7-4b1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="FbC-oZ-zQK"/>
+                <constraint firstItem="YTe-kn-c5T" firstAttribute="top" secondItem="xTG-yt-X9N" secondAttribute="bottom" constant="10" id="HR8-Ix-7EH"/>
+                <constraint firstItem="E1e-uh-D63" firstAttribute="centerX" secondItem="gaX-dr-QW5" secondAttribute="centerX" id="Nbc-Y3-xyf"/>
+                <constraint firstItem="gaX-dr-QW5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Xvu-ZJ-uVi"/>
+                <constraint firstItem="D2k-TW-036" firstAttribute="centerX" secondItem="Ot1-RK-6jf" secondAttribute="centerX" id="aMp-6H-Y9E"/>
+                <constraint firstAttribute="trailing" secondItem="VYI-m7-4b1" secondAttribute="trailing" constant="15" id="iTN-x1-cHI"/>
+                <constraint firstItem="Ot1-RK-6jf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="k9I-ES-Z45"/>
+                <constraint firstItem="TrX-VZ-Gtm" firstAttribute="centerY" secondItem="xTG-yt-X9N" secondAttribute="centerY" id="k9m-fv-Lx7"/>
+                <constraint firstItem="xTG-yt-X9N" firstAttribute="top" secondItem="gaX-dr-QW5" secondAttribute="bottom" constant="75" id="ltp-5G-eJj"/>
+                <constraint firstItem="VYI-m7-4b1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="mNZ-es-dYH"/>
+                <constraint firstItem="TrX-VZ-Gtm" firstAttribute="leading" secondItem="xTG-yt-X9N" secondAttribute="trailing" constant="10" id="oZT-g6-ZEk"/>
+                <constraint firstItem="Y2y-B2-Hbk" firstAttribute="leading" secondItem="TrX-VZ-Gtm" secondAttribute="leading" id="pfJ-pt-0R5"/>
+                <constraint firstItem="Y2y-B2-Hbk" firstAttribute="centerY" secondItem="YTe-kn-c5T" secondAttribute="centerY" id="qLk-9w-wHC"/>
+                <constraint firstItem="R66-PI-PPf" firstAttribute="centerX" secondItem="Ot1-RK-6jf" secondAttribute="centerX" id="s1z-xp-4Hx"/>
+                <constraint firstAttribute="trailing" secondItem="gaX-dr-QW5" secondAttribute="trailing" constant="15" id="sRi-h3-OtF"/>
+                <constraint firstItem="R66-PI-PPf" firstAttribute="top" secondItem="Ot1-RK-6jf" secondAttribute="bottom" constant="150" id="xOh-xp-57Q"/>
+                <constraint firstItem="YTe-kn-c5T" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="y0l-pf-ACz"/>
+                <constraint firstItem="xTG-yt-X9N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="yO3-8U-bAy"/>
+                <constraint firstItem="Ot1-RK-6jf" firstAttribute="top" secondItem="gaX-dr-QW5" secondAttribute="bottom" constant="15" id="zB4-c0-bdU"/>
+            </constraints>
+            <point key="canvasLocation" x="16.5" y="42.5"/>
+        </view>
+    </objects>
+</document>
