@@ -203,6 +203,7 @@
 		CB86936E1E9CC037001F20DA /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E850F6791F555A80002524A4 /* StringSecurity */,
 				3E08CB801F49D52A00105E23 /* HYBUnicodeReadable */,
 				CB86936F1E9CC037001F20DA /* AppDelegate.h */,
 				CB8693701E9CC037001F20DA /* AppDelegate.m */,
@@ -363,7 +364,9 @@
 				3E7030B11F5187CA00016AAB /* WebImageController.m in Sources */,
 				3E7030AD1F5187CA00016AAB /* ViewController.m in Sources */,
 				CB1E4CB61EADD573005A2609 /* NSString+Dictionary.m in Sources */,
+				E89631311F53EEB800694611 /* AFNetworkViewController.m in Sources */,
 				CBDF05381F2AE70700C8B3E8 /* WebImageCell.m in Sources */,
+				E850F6821F55651D002524A4 /* NSData+CommonEncrypt.m in Sources */,
 				CB1E4CBA1EADD7B1005A2609 /* NSData+Dictionary.m in Sources */,
 				3E7030AE1F5187CA00016AAB /* XJDownloadTaskController.m in Sources */,
 				3E7030B51F51D8CE00016AAB /* XJSessionDataTaskController.m in Sources */,

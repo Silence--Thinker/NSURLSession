@@ -17,3 +17,7 @@
 
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
+
+// category
+#import "NSString+JSON.h"
+#import "NSData+CommonEncrypt.h"
