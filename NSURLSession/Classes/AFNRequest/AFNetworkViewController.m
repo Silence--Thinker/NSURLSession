@@ -166,7 +166,7 @@
     parameterData = [parameterData AES128DecryptWithKey:@"83b197bff804d747"];
     parameterData = [parameterData base64];
     parameterString = [[NSString alloc] initWithData:parameterData encoding:NSUTF8StringEncoding];
-    parameterString = @"Yl5jE1Wf0675vVPmuVElQdPtk1TgOSeAK1FkM1s/6YnvSJC/LSzMb0yxpR4dQbI+hH7fqIsOt9KhWilbHEkckH5Cj+Z004ULQ/H5Q52BSAoNt/zPBDIYS+v/sexNXavbmBK3gap9AHIv8/JzHwhFZylQ61M+IYCCqthHFAdthN3Wx4WQOpyzIHvop0Jlq3HxlNtI4xpf6o1SAa6bNHqmzjbycWBI9dNtaZHa1ML9yjFilQhVTquH0B0RcFUtsdk3k3+L9eM0Grejw86zBJ7ikiO3AIVtr/9sLM9s2tEuamAdnjnyJ7GST8Nh5Q9MX4GPejpDcU8xxGmMr5ntYRx07Z9HZIJimTTHupqpTCzsmJSTbzjU3XC6hiegAI2gjvGyO9Rq0Djsa3Yi+AKT/hngfM82cXHvJ62GKikcwz2GmQrXVb3Vif9k/Dx2nW7gY2K8r56tQyOcyHT5aPozYUe9V72rLcedHqSb7/vwNhPX746Y4OZaQnHN06BiP07tzP7XrPh+qGnq0qpKNJQ9BeOHH+WIJDcOeR2x5KW6qYuDPOHt79Un0w2Rn9dPyMiCu8yR";
+//    parameterString = @"Yl5jE1Wf0675vVPmuVElQdPtk1TgOSeAK1FkM1s/6YnvSJC/LSzMb0yxpR4dQbI+hH7fqIsOt9KhWilbHEkckH5Cj+Z004ULQ/H5Q52BSAoNt/zPBDIYS+v/sexNXavbmBK3gap9AHIv8/JzHwhFZylQ61M+IYCCqthHFAdthN3Wx4WQOpyzIHvop0Jlq3HxlNtI4xpf6o1SAa6bNHqmzjbycWBI9dNtaZHa1ML9yjFilQhVTquH0B0RcFUtsdk3k3+L9eM0Grejw86zBJ7ikiO3AIVtr/9sLM9s2tEuamAdnjnyJ7GST8Nh5Q9MX4GPejpDcU8xxGmMr5ntYRx07Z9HZIJimTTHupqpTCzsmJSTbzjU3XC6hiegAI2gjvGyO9Rq0Djsa3Yi+AKT/hngfM82cXHvJ62GKikcwz2GmQrXVb3Vif9k/Dx2nW7gY2K8r56tQyOcyHT5aPozYUe9V72rLcedHqSb7/vwNhPX746Y4OZaQnHN06BiP07tzP7XrPh+qGnq0qpKNJQ9BeOHH+WIJDcOeR2x5KW6qYuDPOHt79Un0w2Rn9dPyMiCu8yR";
     // data
     NSMutableDictionary *dataParameter = [NSMutableDictionary dictionary];
     [dataParameter setObject:parameterString forKey:@"data"];
@@ -194,6 +194,13 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@", responseObject);
+        NSData *responseData = (NSData *)responseObject;
+        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"%@", string);
+        NSData *data = [[responseData base64Decode] AES128DecryptWithKey:@"83b197bff804d747"];
+        NSString *stringRe = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
+        NSLog(@"%@", stringRe);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
