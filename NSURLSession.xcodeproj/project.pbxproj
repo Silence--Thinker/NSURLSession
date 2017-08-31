@@ -29,6 +29,8 @@
 		CB8693721E9CC037001F20DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8693701E9CC037001F20DA /* AppDelegate.m */; };
 		CBDF05381F2AE70700C8B3E8 /* WebImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDF05371F2AE70700C8B3E8 /* WebImageCell.m */; };
 		E81359421F56B8C4004F7EE6 /* NSString+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = E81359411F56B8C4004F7EE6 /* NSString+JSONString.m */; };
+		E8E47AF51F57DEBF00B366AC /* ResponseCircleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E47AF41F57DEBF00B366AC /* ResponseCircleInfo.m */; };
+		E8E47AF81F57DF1300B366AC /* TransformModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E47AF71F57DF1300B366AC /* TransformModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,10 @@
 		CFD14E61386EBBAA45D8CC71 /* Pods-NSURLSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLSession.release.xcconfig"; path = "Pods/Target Support Files/Pods-NSURLSession/Pods-NSURLSession.release.xcconfig"; sourceTree = "<group>"; };
 		E81359401F56B8C4004F7EE6 /* NSString+JSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSONString.h"; sourceTree = "<group>"; };
 		E81359411F56B8C4004F7EE6 /* NSString+JSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSONString.m"; sourceTree = "<group>"; };
+		E8E47AF31F57DEBF00B366AC /* ResponseCircleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseCircleInfo.h; sourceTree = "<group>"; };
+		E8E47AF41F57DEBF00B366AC /* ResponseCircleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseCircleInfo.m; sourceTree = "<group>"; };
+		E8E47AF61F57DF1300B366AC /* TransformModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformModel.h; sourceTree = "<group>"; };
+		E8E47AF71F57DF1300B366AC /* TransformModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,7 @@
 		CB86936B1E9CC037001F20DA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E8DCF5441F57A4B900B57C9A /* Mynetwork */,
 				3EE6C7D11F55B8130096EFF9 /* AFNRequest */,
 				3EE6C7D41F55B8130096EFF9 /* First */,
 				3EE6C7D81F55B8130096EFF9 /* SessionTask */,
@@ -247,6 +254,18 @@
 				3EE6C7EE1F55B8390096EFF9 /* NSData+CommonEncrypt.m */,
 			);
 			path = StringSecurity;
+			sourceTree = "<group>";
+		};
+		E8DCF5441F57A4B900B57C9A /* Mynetwork */ = {
+			isa = PBXGroup;
+			children = (
+				E8E47AF31F57DEBF00B366AC /* ResponseCircleInfo.h */,
+				E8E47AF41F57DEBF00B366AC /* ResponseCircleInfo.m */,
+				E8E47AF61F57DF1300B366AC /* TransformModel.h */,
+				E8E47AF71F57DF1300B366AC /* TransformModel.m */,
+			);
+			name = Mynetwork;
+			path = ../../../../../../silence/Documents/GitHub/NSURLSession/NSURLSession/Classes/Mynetwork;
 			sourceTree = "<group>";
 		};
 		F898754FCF171EB7CF759874 /* Pods */ = {
@@ -402,6 +421,8 @@
 				3EE6C7EB1F55B8130096EFF9 /* AFNetworkingController.m in Sources */,
 				3EE6C7E71F55B8130096EFF9 /* XJDownloadTaskController.m in Sources */,
 				CB8693561E9C80E3001F20DA /* main.m in Sources */,
+				E8E47AF81F57DF1300B366AC /* TransformModel.m in Sources */,
+				E8E47AF51F57DEBF00B366AC /* ResponseCircleInfo.m in Sources */,
 				3E08CB881F49D52A00105E23 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				3E08CB891F49D52A00105E23 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				CB8693721E9CC037001F20DA /* AppDelegate.m in Sources */,
@@ -532,6 +553,7 @@
 				DEVELOPMENT_TEAM = 73RJAGC8RF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = NSURLSession/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.Silence.NSURLSession;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -546,6 +568,7 @@
 				DEVELOPMENT_TEAM = 73RJAGC8RF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = NSURLSession/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.Silence.NSURLSession;
 				PRODUCT_NAME = "$(TARGET_NAME)";

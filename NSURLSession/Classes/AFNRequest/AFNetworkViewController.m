@@ -10,6 +10,9 @@
 #import "AFNetworkViewController.h"
 #import <AFNetworking/AFURLRequestSerialization.h>
 
+#import "ResponseCircleInfo.h"
+#import "TransformModel.h"
+
 @interface AFNetworkViewController ()
 
 
@@ -235,7 +238,17 @@
         NSData *tempData = [data AES256DecryptWithKey:@"60a4619790c2b258"];
         NSString *stringRe = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
         
-        NSLog(@"success%@", stringRe);
+        NSData *jsonData = [stringRe dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSDictionary *responseDcit = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:NULL];
+        NSLog(@"%@", responseDcit);
+
+        NSArray *array = [responseDcit objectForKey:@"data"];
+        if (array.count) {
+            ResponseCircleInfo *circleInfo = [ResponseCircleInfo transformModelWith:array[0]];
+            
+            NSLog(@"%@", circleInfo.circle_user_nick);
+        }
     }];
     [task resume];
     
