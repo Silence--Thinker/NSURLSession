@@ -28,7 +28,7 @@
 		CB8693641E9C80E3001F20DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8693621E9C80E3001F20DA /* LaunchScreen.storyboard */; };
 		CB8693721E9CC037001F20DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8693701E9CC037001F20DA /* AppDelegate.m */; };
 		CBDF05381F2AE70700C8B3E8 /* WebImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDF05371F2AE70700C8B3E8 /* WebImageCell.m */; };
-		E850F67F1F555A80002524A4 /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E850F67D1F555A80002524A4 /* NSString+JSON.m */; };
+		E81359421F56B8C4004F7EE6 /* NSString+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = E81359411F56B8C4004F7EE6 /* NSString+JSONString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,8 +73,8 @@
 		CBDF05361F2AE70700C8B3E8 /* WebImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebImageCell.h; sourceTree = "<group>"; };
 		CBDF05371F2AE70700C8B3E8 /* WebImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebImageCell.m; sourceTree = "<group>"; };
 		CFD14E61386EBBAA45D8CC71 /* Pods-NSURLSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLSession.release.xcconfig"; path = "Pods/Target Support Files/Pods-NSURLSession/Pods-NSURLSession.release.xcconfig"; sourceTree = "<group>"; };
-		E850F67C1F555A80002524A4 /* NSString+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSON.h"; sourceTree = "<group>"; };
-		E850F67D1F555A80002524A4 /* NSString+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSON.m"; sourceTree = "<group>"; };
+		E81359401F56B8C4004F7EE6 /* NSString+JSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSONString.h"; sourceTree = "<group>"; };
+		E81359411F56B8C4004F7EE6 /* NSString+JSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSONString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,8 +241,8 @@
 		E850F6791F555A80002524A4 /* StringSecurity */ = {
 			isa = PBXGroup;
 			children = (
-				E850F67C1F555A80002524A4 /* NSString+JSON.h */,
-				E850F67D1F555A80002524A4 /* NSString+JSON.m */,
+				E81359401F56B8C4004F7EE6 /* NSString+JSONString.h */,
+				E81359411F56B8C4004F7EE6 /* NSString+JSONString.m */,
 				3EE6C7ED1F55B8390096EFF9 /* NSData+CommonEncrypt.h */,
 				3EE6C7EE1F55B8390096EFF9 /* NSData+CommonEncrypt.m */,
 			);
@@ -394,6 +394,7 @@
 				3EE6C7EF1F55B8390096EFF9 /* NSData+CommonEncrypt.m in Sources */,
 				3EE6C7E61F55B8130096EFF9 /* ViewController.m in Sources */,
 				3EE6C7E91F55B8130096EFF9 /* XJSessionDataTaskController.m in Sources */,
+				E81359421F56B8C4004F7EE6 /* NSString+JSONString.m in Sources */,
 				CB1E4CB61EADD573005A2609 /* NSString+Dictionary.m in Sources */,
 				CBDF05381F2AE70700C8B3E8 /* WebImageCell.m in Sources */,
 				3EE6C7E41F55B8130096EFF9 /* AFNetworkViewController.m in Sources */,
@@ -404,7 +405,6 @@
 				3E08CB881F49D52A00105E23 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				3E08CB891F49D52A00105E23 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				CB8693721E9CC037001F20DA /* AppDelegate.m in Sources */,
-				E850F67F1F555A80002524A4 /* NSString+JSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,4 +27,9 @@
 - (NSData *)AES128EncryptWithKey:(NSString *)key iv:(NSString *)iv;
 /** AES-128 解密 有初始向量 */
 - (NSData *)AES128DecryptWithKey:(NSString *)key iv:(NSString *)iv;
+
+/** AES-256 加密 有初始向量 */
+- (NSData *)AES256EncryptWithKey:(NSString *)key;
+/** AES-256 解密 有初始向量 */
+- (NSData *)AES256DecryptWithKey:(NSString *)key;
 @end

@@ -19,5 +19,5 @@
 #import "UIImageView+WebCache.h"
 
 // category
-#import "NSString+JSON.h"
+#import "NSString+JSONString.h"
 #import "NSData+CommonEncrypt.h"

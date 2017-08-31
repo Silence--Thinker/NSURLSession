@@ -112,8 +112,12 @@
     }];
 }
 
-/** ZHS */
+/** ZHS  成功 */
 - (void)laodingRequestWithZHS {
+    /*
+     每个设备的加密串不一样: a634e8a8e63aac0cdda20c51324195fc  key: 60a4619790c2b258
+     */
+    
     NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
     [sessionConfig setHTTPAdditionalHeaders:@{@"User-Agent" : @"ios"}];
     
@@ -124,10 +128,10 @@
     // curr
     NSMutableDictionary *curr = [NSMutableDictionary dictionary];
     
-    [curr setObject:@(210565601) forKey:@"child_id"];
-    [curr setObject:@(202449672) forKey:@"class_id"];
-    [curr setObject:@(202032240) forKey:@"school_id"];
-    [curr setObject:@(212616083) forKey:@"user_id"];
+    [curr setObject:@(217667186) forKey:@"child_id"];
+    [curr setObject:@(202788208) forKey:@"class_id"];
+    [curr setObject:@(4833) forKey:@"school_id"];
+    [curr setObject:@(221280298) forKey:@"user_id"];
     [parameters setObject:curr forKey:@"curr"];
     
     // sa
@@ -149,37 +153,46 @@
     [parameters setObject:@"P_Build_6.4.4" forKey:@"version_no"];
     
     // current parameter
-    [parameters setObject:@(212616083) forKey:@"toUserId"];
-    
+//    [parameters setObject:@(221280298) forKey:@"toUserId"];
 //    [parameters setObject:@(1) forKey:@"type"];
-    [parameters setObject:@"6043c13b895775edd125a6028032cb19" forKey:@"uuid"];
+//    [parameters setObject:@"6043c13b895775edd125a6028032cb19" forKey:@"uuid"];
 //    [parameters setObject:@"{\n\"createTime\" : -1\n}" forKey:@"order"];
-//    [parameters setObject:@(1) forKey:@"pageNo"];
-//    [parameters setObject:@(10) forKey:@"pageSize"];
+    [parameters setObject:@(1) forKey:@"pageNo"];
+    [parameters setObject:@(20) forKey:@"pageSize"];
     
     // parameters =>> 转成String =>> AES加密（加密key: 5ac353af8aaf0906） =>> bsse 64 加密
+    
     NSString *parameterString = @"";
-    NSString *tempString = [NSString jsonStringWithDictionary:parameters];
+    NSString *tempString = [NSString jsonStringOfObject:parameters];
     tempString = [tempString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
     NSData *parameterData = [tempString dataUsingEncoding:NSUTF8StringEncoding];
-    parameterData = [parameterData AES128DecryptWithKey:@"83b197bff804d747"];
+    parameterData = [parameterData AES256EncryptWithKey:@"60a4619790c2b258"];
     parameterData = [parameterData base64];
     parameterString = [[NSString alloc] initWithData:parameterData encoding:NSUTF8StringEncoding];
-//    parameterString = @"Yl5jE1Wf0675vVPmuVElQdPtk1TgOSeAK1FkM1s/6YnvSJC/LSzMb0yxpR4dQbI+hH7fqIsOt9KhWilbHEkckH5Cj+Z004ULQ/H5Q52BSAoNt/zPBDIYS+v/sexNXavbmBK3gap9AHIv8/JzHwhFZylQ61M+IYCCqthHFAdthN3Wx4WQOpyzIHvop0Jlq3HxlNtI4xpf6o1SAa6bNHqmzjbycWBI9dNtaZHa1ML9yjFilQhVTquH0B0RcFUtsdk3k3+L9eM0Grejw86zBJ7ikiO3AIVtr/9sLM9s2tEuamAdnjnyJ7GST8Nh5Q9MX4GPejpDcU8xxGmMr5ntYRx07Z9HZIJimTTHupqpTCzsmJSTbzjU3XC6hiegAI2gjvGyO9Rq0Djsa3Yi+AKT/hngfM82cXHvJ62GKikcwz2GmQrXVb3Vif9k/Dx2nW7gY2K8r56tQyOcyHT5aPozYUe9V72rLcedHqSb7/vwNhPX746Y4OZaQnHN06BiP07tzP7XrPh+qGnq0qpKNJQ9BeOHH+WIJDcOeR2x5KW6qYuDPOHt79Un0w2Rn9dPyMiCu8yR";
+    
+    NSData *responseData = [parameterString dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [responseData base64Decode];
+    NSData *tempData = [data AES256DecryptWithKey:@"60a4619790c2b258"];
+    NSString *stringRe = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"success%@", stringRe);
+    
     // data
     NSMutableDictionary *dataParameter = [NSMutableDictionary dictionary];
     [dataParameter setObject:parameterString forKey:@"data"];
     [dataParameter setObject:@(41) forKey:@"data_ver"];
     [dataParameter setObject:@"1" forKey:@"ios_arm64_flag"];
-    [dataParameter setObject:@"6043c13b895775edd125a6028032cb19" forKey:@"uuid"];
+    [dataParameter setObject:@"a634e8a8e63aac0cdda20c51324195fc" forKey:@"uuid"];
     
-    NSString *URLString = @"https://javaport.bbtree.com/public/bizmsg/noreadnums";
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:dataParameter error:NULL];
+    // member/classstar/getCardInfo
+    // circle_v7/circle/my/list
+    // public/bizmsg/noreadnums
+    NSString *URLString = @"https://javaport.bbtree.com/circle_v7/circle/my/list";
+    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:dataParameter error:NULL];
     
     [request setValue:@"ios" forHTTPHeaderField:@"User-Agent"];
-    
-    
+    [AFJSONResponseSerializer serializer];
     AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
     responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     manager.responseSerializer = responseSerializer;
@@ -189,27 +202,27 @@
     managerH.requestSerializer = [AFJSONRequestSerializer serializer];
     [managerH.requestSerializer setValue:@"ios" forHTTPHeaderField:@"User-Agent"];
     
+    /*
     [managerH POST:URLString parameters:dataParameter progress:^(NSProgress * _Nonnull uploadProgress) {
         NSLog(@"%@", uploadProgress);
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", responseObject);
+
         NSData *responseData = (NSData *)responseObject;
-        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", string);
-        NSData *data = [[responseData base64Decode] AES128DecryptWithKey:@"83b197bff804d747"];
-        NSString *stringRe = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+     
+        NSData *data = [responseData base64Decode];
+        NSData *tempData = [data AES256DecryptWithKey:@"60a4619790c2b258"];
+        NSString *stringRe = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
         
-        NSLog(@"%@", stringRe);
+        NSLog(@"success%@", stringRe);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
         
     }];
     return;
+    */
     
-    
-    /*
     NSURLSessionDataTask *task = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if (error) {
             NSLog(@"%@", error);
@@ -217,71 +230,16 @@
             NSLog(@"请求成功了");
         }
         
-        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", string);
+        NSData *responseData = (NSData *)responseObject;
+        NSData *data = [responseData base64Decode];
+        NSData *tempData = [data AES256DecryptWithKey:@"60a4619790c2b258"];
+        NSString *stringRe = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
         
-        
+        NSLog(@"success%@", stringRe);
     }];
     [task resume];
-    */
+    
     
 }
+
 @end
-
-//@implementation AFJSONRequestSerializer
-//
-//+ (instancetype)serializer {
-//    return [self serializerWithWritingOptions:(NSJSONWritingOptions)0];
-//}
-//
-//+ (instancetype)serializerWithWritingOptions:(NSJSONWritingOptions)writingOptions {
-//    AFJSONRequestSerializer *serializer = [[self alloc] init];
-//    serializer.writingOptions = writingOptions;
-//    return serializer;
-//}
-//@end
-/*
- {
- curr =     {
-     "child_id" = 103611435;
-     "class_id" = 100187260;
-     "school_id" = 100035119;
-     "user_id" = 105346878;
- };
- 
- "data_ver" = 41;
- "device_no" = iPhone;
- "mobile_system" = "iOS 10.3.3";
- order = "{\n  \"createTime\" : -1\n}";
- pageNo = 1;
- pageSize = 10;
- platform = 1;
- 
- sa =     {
-     "$app_version" = "P_Build_6.4.4";
-     "$model" = iPhone;
-     "$network_type" = WIFI;
-     "$os" = iOS;
-     "$os_version" = "iOS 10.3.3";
- };
- 
- "school_app_type" = 0;
- toUserId = 105346878;
- type = 1;
- uuid = 6043c13b895775edd125a6028032cb19;
- "version_code" = 644;
- "version_no" = "P_Build_6.4.4";
- }
- */
-
-/*
- {
- data = "";
- "data_ver" = 41;
- "ios_arm64_flag" = 1;
- uuid = 6043c13b895775edd125a6028032cb19;
- }
- */
-
-
-
